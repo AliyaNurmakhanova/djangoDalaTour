@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--    <link rel="stylesheet" href="{% static 'css/test.css' %}" type="text/css">-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+
+    <meta charset="UTF-8">
+    {% block title  %}
+        <title>
+            About Us
+        </title>
+    {% endblock title %}
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+</head>
+<body>
+    {% block header %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+              <img src="https://cdn-icons-png.flaticon.com/512/3125/3125848.png" width="70" height="70" alt="Travel  free icon" title="Travel free icon">
+            <a class="navbar-brand" href="{% url 'index' %}">DalaTour</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contacts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    {% endblock header %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    {% block footer %}
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a href="{% url 'index' %}" class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="#feature" class="nav-link px-2 text-muted">Features</a></li>
+              <li class="nav-item"><a href="#tours" class="nav-link px-2 text-muted">Tours</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+              <li class="nav-item"><a href="{% url 'aboutus' %}" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <div class="py-5 text-center container" id = "contact">
+                <ul class="footer-info">
+                    <div>
+                        <a href="tel:+7 775 121 8313">
+                            <i class="fa fa-phone"></i>
+                            <span>Phone:</span>
+                            +7 775 121 8313
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="gmail: dalatour@gmail.com">
+                            <i class="fa fa-envelope-o"></i>
+                            <span>Email:</span>
+                            dalatour@gmail.com
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="address: Satbayev 22, Almaty">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Address:</span>
+                            Satbayev 22, Almaty
+                        </a>
+                    </div>
+                </ul>
+            </div>
+            <p class="text-center text-muted">© 2022 DalaTour, Inc</p>
+          </footer>
+    {% endblock footer %}
+</body>
+</html>
